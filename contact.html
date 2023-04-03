@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+	<link rel="stylesheet" href="style/contact.css" >
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>
+contact
+</title>
+</head>
+<body>
+	<div id="contact_page">
+	<header>
+		<img src="images/tringal.png "width="130">
+		<div id="pic_box"></div>
+		</header>
+		<h1 id="page_name">Privite contact</h1>
+		<div id="add_contact">
+		  <form id="add_form">
+		    <input type="text" name="fullname"placeholder="fullname" id="fullname"/>
+		      <br /><br />
+		    <input type="text" name="pmobile"placeholder="primery number" id="pnum"/>
+			 <br /><br />
+		    <input type="text" name="smobile"placeholder="secondary number" id="snum" />
+			 <br /><br />
+			<input type="button" value="Add" onclick="add_contact()" id="add"/>
+			  <span style="font-family:calibri;font-size:25px;font-weight:bold;display:none;" id="saved">user success</span>
+			</form>
+		</div>
+		<div id="cont_page">
+            
+		<h2 id="contact_header">Contact list</h2>
+			<form>
+		<input type="search" placeholder="sarch contact here...." oninput="search_cont(this)"id="search_contact">
+			</form>
+           
+		  <div id="contact">
+			
+	     <!--<fieldset>
+				   <legend>MR Shubham Sinha</legend>
+				   <ol>  
+					   <li>91+ 9113155571</li>
+					   <li>91+ 7739879874</li><i class="fa fa-save" style="color:yellow; font-size:20px;margin-top:-30px;float:left;margin-left:170px;cursor:pointer;" id="save_icon" title="Edit"></i><i class="fa fa-edit" style="color:yellow; font-size:20px;margin-top:-30px;float:left;margin-left:200px;cursor:pointer;" id="edit_icon" title="Edit"></i><i class="fa fa-trash" style ="color:yellow; font-size:20px;margin-top:-30px;margin-left:230px;float:left;" id="delete_icon" title="delete"></i>
+					   <span id="save_success">save success</span>
+				   </ol>
+			
+			
+			  </fieldset> -->
+		  </div>
+		</div>
+        
+        <div id="contact_footer">
+            <span style="float:left; cursor:pointer;"onclick="logout()" ><i class="fa fa-sign-out"></i> Logout</span>
+            <span style="float:right;cursor:pointer;"onclick="restore_contact()"><i class="fa fa-refresh"></i> Restore contact</span>
+        </div>
+        <div id="restore_contact">
+           <h1 id="restore_notice"></h1>
+               <table width="77%" align="center" id="restore_table">
+                   <tr>
+                      <th>Contact Name</th>
+                      <th>First number</th>
+                      <th>Second number</th>
+                      <th>Restore Now</th>
+                   </tr>
+               </table>
+              <i class="fa fa-times-circle" style="font-size:25px;position:absolute;top:40px;right:20px; color:red;"onclick="this.parentElement.style.height='0'"></i>
+        
+        </div>
+		<i class="fa fa-plus-circle" style="font-size:50px; color:#ff7466" id="fa_icon"></i>
+		
+	</div>
+	<script src="script/contact.js"></script>
+</body>
+<html>
